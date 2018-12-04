@@ -1,0 +1,20 @@
+.sourse{
+  height: 300px;
+  border-bottom: 1px dotted gray;
+  .sourse__header {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    .sourse__header__title {
+      font-size: 40px;
+      color: chocolate;
+      font-weight: bold;
+      margin-top: 80px;
+    }
+    .sourse__header__subtitle {
+      margin-top: 20px;
+      color: #707070;
+    }
+  }
+}
