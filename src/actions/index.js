@@ -16,3 +16,7 @@ export const postEvent = title => ({
   type: types.POST_EVENT,
   title
 })
+export const deleteEvent = title => ({
+  type: types.DELETE_EVENT,
+  title
+})

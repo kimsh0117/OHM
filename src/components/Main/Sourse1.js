@@ -33,8 +33,7 @@ class Sourse1 extends Component{
 }
 
 const mapStateToProps = state => ({
-  events: state.eventReducer.events,
-  audience: state.eventReducer.audience
+  events: state.eventReducer.events
 });
 
 const mapDispatchToProps = dispatch => ({

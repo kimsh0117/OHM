@@ -1,4 +1,4 @@
-import { GET_EVENTS, POST_EVENT } from "actions/types";
+import { GET_EVENTS, POST_EVENT, DELETE_EVENT } from "actions/types";
 import { mergeSort } from 'utils/mergesort'
 
 const events = { events: [], audience: [] };
@@ -23,6 +23,11 @@ export default function(state = events, action) {
       return {
         ...state,
         audience: [...state.audience, action.title]
+      };
+    case DELETE_EVENT:
+      return {
+        ...state,
+        audience: [...state.audience].filter(event=> event !== action.title)
       };
     default:
       return state;

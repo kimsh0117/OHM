@@ -13,3 +13,4 @@ export const GET_EVENTS = createRequestTypes('GET_PRODUCTS');
 
 // without saga
 export const POST_EVENT = "POST_EVENT"
+export const DELETE_EVENT = "DELETE_EVENT"
