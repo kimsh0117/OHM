@@ -1,10 +1,11 @@
-import { GET_EVENTS } from "actions/types";
-import { mergeSort } from 'utils/algorithm'
+import { GET_EVENTS, POST_EVENT } from "actions/types";
+import { mergeSort } from 'utils/mergesort'
 
-const events = { events: [] };
+const events = { events: [], audience: [] };
 
 export default function(state = events, action) {
   switch (action.type) {
+    // get event from server
     case GET_EVENTS['REQUEST']:
       return { ...state };
     case GET_EVENTS['SUCCESS']:
@@ -16,6 +17,12 @@ export default function(state = events, action) {
       return {
         ...state,
         error: action,
+      };
+    // post event to audience
+    case POST_EVENT:
+      return {
+        ...state,
+        audience: [...state.audience, action.title]
       };
     default:
       return state;

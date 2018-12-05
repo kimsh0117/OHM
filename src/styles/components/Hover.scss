@@ -1,0 +1,53 @@
+.hover-nomal {
+  margin: 0 auto;
+  width: 80%;
+  height: 700px;
+  margin-top: 40px;
+  overflow: auto;
+  visibility: hidden;
+  .hover__content {
+    visibility: visible;
+    ul {
+      li {
+        color: #707070;
+        height: 50px;
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        width: 500px;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      li:hover {
+        color: chocolate
+      }
+    }
+  }
+}
+
+.hover-hover {
+  margin: 0 auto;
+  width: 80%;
+  height: 700px;
+  margin-top: 40px;
+  overflow: auto;
+  visibility: visible;
+  .hover__content {
+    visibility: visible;
+    ul {
+      li {
+        color: #707070;
+        height: 50px;
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        width: 500px;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      li:hover {
+        color: chocolate
+      }
+    }
+  }
+}
