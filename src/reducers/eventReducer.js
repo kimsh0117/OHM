@@ -1,4 +1,5 @@
 import { GET_EVENTS } from "actions/types";
+import { mergeSort } from 'utils/algorithm'
 
 const events = { events: [] };
 
@@ -9,7 +10,7 @@ export default function(state = events, action) {
     case GET_EVENTS['SUCCESS']:
       return {
         ...state,
-        events: action,
+        events: mergeSort(action.res)
       };
     case GET_EVENTS['FAILURE']:
       return {
