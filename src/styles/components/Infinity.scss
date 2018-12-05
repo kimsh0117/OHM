@@ -1,0 +1,20 @@
+.hover-nomal {
+  margin: 0 auto;
+  width: 80%;
+  height: 700px;
+  margin-top: 40px;
+  overflow: auto;
+  visibility: hidden;
+  .hover__content {
+    visibility: visible
+  }
+}
+
+.hover-hover {
+  margin: 0 auto;
+  width: 80%;
+  height: 700px;
+  margin-top: 40px;
+  overflow: auto;
+  visibility: visible;
+}

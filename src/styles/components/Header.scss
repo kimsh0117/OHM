@@ -1,40 +1,20 @@
-.header {
-  width: 100%;
-  height: 85px;
-  background-color: #ffffff;
-  border-bottom: 0.5px solid #cfcfcf;
-  .header__container {
+.sourse{
+  height: 300px;
+  border-bottom: 1px dotted gray;
+  .sourse__header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 80%;
     margin: 0 auto;
-    height: 75%;
-    padding-top: 25px;
-    .header__container__headline {
-      font-size: 30px;
+    .sourse__header__title {
+      font-size: 40px;
+      color: chocolate;
       font-weight: bold;
-      color: #707070;
-      cursor: pointer;
+      margin-top: 80px;
     }
-    .header__container__nav {
-      display: flex;
+    .sourse__header__subtitle {
+      margin-top: 20px;
       color: #707070;
-      ul {
-        display: flex;
-        flex-direction: row;
-        margin-top: 8px;
-        li {
-          margin-left: 40px;
-          font-size: 14px;
-          cursor: pointer;
-        }
-      }
-      a {
-        color: #707070;
-      }
-      a:hover {
-        color: chocolate;
-      }
     }
   }
 }
