@@ -4,6 +4,7 @@ export { default as Search } from "components/Base/Search"
 export { default as Header } from "components/Base/Header"
 export { default as Hover } from "components/Base/Hover"
 export { default as TreeNode } from "components/Base/TreeNode"
+export { default as SearchList } from "components/Base/SearchList"
 // Main
 export { default as Audience } from "components/Main/Audience"
 export { default as Sourse1 } from "components/Main/Sourse1"

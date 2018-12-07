@@ -16,7 +16,7 @@ class Sourse2 extends Component{
           <p className="sourse__header__subtitle">you can search big event detail data using infinity scroll</p>
         </Header>
         <div className="tree">
-          {events.map((event,index)=><TreeNode node={event} key={index}/>)}
+          {events.map((event,index)=><TreeNode node={event} key={index} button={this.clickButton}/>)}
         </div>
       </Fragment>
     )

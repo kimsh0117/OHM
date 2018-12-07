@@ -14,7 +14,6 @@ export default class TreeNode extends Component {
   render() {
   	var childNodes;
     var className;
-
     if (this.props.node.childNodes != null) {
       childNodes = this.props.node.childNodes.map(function(node, index) {
         return <li key={index}><TreeNode node={node} /></li>
@@ -32,11 +31,11 @@ export default class TreeNode extends Component {
     if (!this.state.visible) {
       style = {display: "none"};
     }
-
+    let {title} = this.props.node
     return (
       <div>
         <h5 onClick={this.toggle} className={className}>
-          {this.props.node.title}
+          {title}
         </h5>
         <ul style={style}>
           {childNodes}

@@ -17,7 +17,7 @@ export default class Nav extends Component {
           </h1>
           <nav className="header__container__nav">
           {(this.props.location.pathname === '/') ? '' : <Search />}
-          <ul>
+          <ul className="header__container__nav_ul">
             <li><NavLink to="/sourse/1">sourse1</NavLink></li>
             <li><NavLink to="/sourse/2">sourse2</NavLink></li>
             <li><NavLink to="/audience">audience</NavLink></li>

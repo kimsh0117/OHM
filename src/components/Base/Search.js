@@ -1,43 +1,61 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 import { connect } from 'react-redux'
 import { postEvent } from 'actions'
+import { SearchList } from 'components'
+
+const regfilter = (wordToMatch,title)=>{
+  const regex = new RegExp(wordToMatch, 'gi');
+  return title.match(regex)
+}
 
 class Search extends Component {
-  state = {value: ''}
+  state = {value: '', match: []}
   handleChange = e => {
     this.setState({value: e.target.value})
+    this.findMatches(this.state.value,regfilter)
   }
   clickButton(title) {
     this.props.postEvent(title);
   }
   // 요기서 재귀로 다 담아놔야 한다.
-  findMatches(wordToMatch) {
-    let {events} = this.props
-    return events.filter(event => {
-      const regex = new RegExp(wordToMatch, 'gi');
-      return event.title.match(regex)
-    });
+  findMatches(wordToMatch,filter) {
+    let {events} = this.props;
+    let result = [];
+    function recursion(current,f){
+      if(f(wordToMatch,current.title)){
+        result.push(current.title)
+      }
+      // Извините не могу решить
+      // if(Object.keys(current).indexOf('childNodes')>-1){
+      //   for(var i=0; i < current.childNodes.length; i+=1){
+      //     recursion(current.childNodes[i],filter);
+      //   }
+      // }
+    }
+    events.forEach(event=>recursion(event,filter))
+    this.setState({match: result})
   }
-  displayMatches(){
-    const { value } = this.state
-    const matchArray = this.findMatches(value)
-    matchArray.map((event,index)=>{
-      return <li>{event.title}</li>
-    })
-  }
+
   render(){
     return (
-      <Fragment>
+      <div className="search">
         <input 
           type="text"
-          className="search"
+          className="search__input"
           value={this.state.value}
           onChange={this.handleChange}
           placeholder="Search events"/>
-        <ul>
-          {this.displayMatches()}
-        </ul>
-      </Fragment>
+        <SearchList>
+          {this.state.match.map((event, i)=>{
+            return (
+              <li key={i}>
+                <div>{event}</div>
+                <button onClick={()=>this.clickButton(event)}>+</button>
+              </li>
+            )
+          })}
+        </SearchList>
+      </div>
     )
   }
 }

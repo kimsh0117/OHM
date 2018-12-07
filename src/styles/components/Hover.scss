@@ -7,21 +7,6 @@
   visibility: hidden;
   .hover__content {
     visibility: visible;
-    ul {
-      li {
-        color: #707070;
-        height: 50px;
-        font-size: 30px;
-        display: flex;
-        flex-direction: row;
-        width: 500px;
-        justify-content: space-between;
-      }
-      li:hover {
-        background-color: wheat;
-        color: black;
-      }
-    }
   }
 }
 
@@ -34,20 +19,5 @@
   visibility: visible;
   .hover__content {
     visibility: visible;
-    ul {
-      li {
-        color: #707070;
-        height: 50px;
-        font-size: 30px;
-        display: flex;
-        flex-direction: row;
-        width: 500px;
-        justify-content: space-between;
-      }
-      li:hover {
-        background-color: wheat;
-        color: black;
-      }
-    }
   }
 }
