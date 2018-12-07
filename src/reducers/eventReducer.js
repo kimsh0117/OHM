@@ -22,7 +22,7 @@ export default function(state = events, action) {
     case POST_EVENT:
       return {
         ...state,
-        audience: [...state.audience, action.title]
+        audience: state.audience.indexOf(action.title) > -1 ? [...state.audience] : [...state.audience, action.title]
       };
     case DELETE_EVENT:
       return {

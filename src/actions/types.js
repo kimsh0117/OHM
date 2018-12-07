@@ -9,7 +9,7 @@ function createRequestTypes(base) {
     return acc;
   }, {});
 }
-export const GET_EVENTS = createRequestTypes('GET_PRODUCTS');
+export const GET_EVENTS = createRequestTypes('GET_EVENTS');
 
 // without saga
 export const POST_EVENT = "POST_EVENT"

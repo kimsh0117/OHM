@@ -4,12 +4,12 @@
 	box-sizing: border-box;
 	font-family: 'Lato';
 }
-
+// ol, ul, li,
 // CSS Reset
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6, p,
 a, em, img, i, form, label,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, 
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, footer, header,
 nav, section, mark, audio, video {
@@ -26,9 +26,9 @@ article, aside, footer, header, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
+// ol, ul {
+// 	list-style: none;
+// }
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
