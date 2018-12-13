@@ -15,8 +15,9 @@ export default class TreeNode extends Component {
   	var childNodes;
     var className;
     if (this.props.node.childNodes != null) {
+      let { button } = this.props
       childNodes = this.props.node.childNodes.map(function(node, index) {
-        return <li key={index}><TreeNode node={node} /></li>
+        return <TreeNode node={node} button={button} key={index}/>
       });
 
 			className = 'togglable';
@@ -33,14 +34,11 @@ export default class TreeNode extends Component {
     }
     let {title} = this.props.node
     return (
-      <div>
-        <h5 onClick={this.toggle} className={className}>
-          {title}
-        </h5>
-        <ul style={style}>
-          {childNodes}
-        </ul>
-      </div>
+      <li>
+        <span onClick={this.toggle} className={className}>{title}</span>
+        <button onClick={()=>this.props.button(title)}>+</button>
+        <ul style={style}>{childNodes}</ul>
+      </li>
     );
   }
 }
