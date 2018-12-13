@@ -20,7 +20,7 @@ class Audience extends Component{
           {audience.map((event, i)=>{
               return (
               <li key={i}>
-                <div>{event}</div>
+                <span>{event}</span>
                 <button onClick={()=>this.clickButton(event)}>-</button>
               </li>
               )
